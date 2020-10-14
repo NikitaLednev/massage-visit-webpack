@@ -1,0 +1,10 @@
+@import "fonts";
+@import "libs";
+
+.mfp-iframe-scaler iframe.mfp-iframe {
+  height: calc(100vh - 44px);
+  top: 0;
+}
+.mfp-iframe-scaler {
+  padding-top: 200%;
+}

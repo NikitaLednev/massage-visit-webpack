@@ -1,0 +1,58 @@
+.section-notice {
+  background-color: #9D331F;
+  overflow: hidden;
+
+  .container {
+    padding: 40px 0;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 40px;
+      right: 0;
+      height: 65%;
+      width: 100%;
+      background: url('../../image/svg/decor-lighter.svg') bottom right no-repeat;
+      background-size: contain;
+      opacity: .55;
+
+      @include media-breakpoint-down(sm) {
+        right: -150px;
+
+      }
+      @include media-breakpoint-down(lg) {
+        opacity: .1;
+      }
+
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 40px 20px;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    color: #fff;
+
+    @include media-breakpoint-up(md) {
+      width: 68%;
+    }
+
+    p {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+}

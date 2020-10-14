@@ -1,0 +1,138 @@
+.interior {
+  &-front {
+    .container {
+      padding-top: 0;
+    }
+
+    &__title {
+      font-size: 42px;
+      font-weight: 700;
+
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__image {
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+    &__text {
+      li {
+        padding-bottom: 5px;
+        font-weight: 500;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    .grid-item {
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+    }
+
+  }
+  &-slide {
+    border-radius: 8px;
+    overflow: hidden;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 30px;
+
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+  }
+  &-swiper {
+    max-height: 380px;
+    border-radius: 8px;
+
+    @include media-breakpoint-down(md) {
+      overflow: unset;
+      max-height: unset;
+
+      .swiper-wrapper {
+        flex-direction: column;
+
+      }
+    }
+
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: max-content;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+
+  &-grid {
+    width: 100%;
+    grid-template-columns: 50% 1fr;
+    gap: 30px;
+
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
+  }
+
+  &-pagination {
+    position: unset;
+
+    .swiper-pagination-bullet {
+      border: 1px solid #9D331F;
+      background-color: transparent;
+      opacity: 1;
+      margin: 0 2px;
+
+      &-active {
+        background-color: #9D331F;
+      }
+    }
+  }
+
+  &-button {
+    &-prev,
+    &-next {
+      position: unset;
+      margin-top: unset;
+
+
+      &:after {
+        font-size: 24px;
+        color: #9D331F;
+      }
+    }
+    &-prev {
+      margin-right: 15px;
+    }
+    &-next {
+      margin-left: 15px;
+    }
+  }
+}

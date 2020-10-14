@@ -1,0 +1,31 @@
+.banner-top {
+
+  @include media-breakpoint-up(md) {
+    min-height: 720px;
+  }
+
+  &__content {
+    color: #fff;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      margin: 20px 0;
+    }
+  }
+  &__button {
+    margin-top: 20px;
+    display: flex;
+
+    &--icon {
+      margin-left: 10px;
+      display: block;
+      width: 22px;
+      height: 22px;
+      background-image: url(../../image/svg/whatsapp-button.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}

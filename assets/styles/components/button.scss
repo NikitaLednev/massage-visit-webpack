@@ -1,0 +1,37 @@
+.button {
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    transition: all .3s ease;
+    outline: none;
+    cursor: pointer;
+
+    text-decoration: none;
+
+}
+
+.button--primary {
+    background-color: #fff;
+    border-radius: 8px;
+    color: $c-primary;
+    padding: 10px 30px;
+    width: max-content;
+
+}
+.button--secondary {
+    background-color: $c-primary;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 30px;
+    width: max-content;
+}
+.section-masters__button {
+    background-color: transparent;
+    color: $c-primary;
+    border-radius: 8px;
+    color: $c-primary;
+    padding: 10px 30px;
+    width: max-content;
+    border: 1px solid $c-primary;
+}

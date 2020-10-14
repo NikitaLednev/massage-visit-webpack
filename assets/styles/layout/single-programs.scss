@@ -1,0 +1,181 @@
+.single-programs {
+  .container {
+    padding: 30px 0;
+
+    @include media-breakpoint-down(md) {
+      padding: 30px 20px;
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-gap: 80px;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 60% 1fr;
+    }
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+  }
+  .programs {
+    &-container {
+
+      &--right {
+        padding-left: 50px;
+        overflow: hidden;
+        height: 100%;
+        max-height: 660px;
+        position: relative;
+        border-left: 1px solid #000;
+
+        @include media-breakpoint-down(xl) {
+          max-height: 950px;
+        }
+        @include media-breakpoint-down(md) {
+          max-height: 100%;
+          padding: 0;
+          border: none;
+        }
+      }
+    }
+    &-info {
+      &--row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+
+        @include media-breakpoint-down(lg) {
+          grid-template-columns: 1fr;
+          grid-gap: 0;
+        }
+      }
+    }
+
+    &__image {
+      max-height: 340px;
+      border-radius: 8px;
+      overflow: hidden;
+
+      @include media-breakpoint-down(md) {
+        max-height: 250px;
+        margin-bottom: 10px;
+      }
+
+
+      img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__title {
+      font-size: 35px;
+      font-weight: 600;
+      margin: 0;
+
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+      }
+    }
+    &-service {
+      padding-top: 10px;
+      padding-bottom: 30px;
+
+      @include media-breakpoint-down(md) {
+        padding-bottom: 15px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      &__title,
+      &__subtitle {
+        color: #9D331F;
+      }
+
+    }
+    &__value,
+    &__gift {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+
+      p {
+        margin: 10px 0 0 0;
+        width: 100%;
+      }
+    }
+    &__price {
+      font-size: 35px;
+      font-weight: 600;
+      margin: 0;
+    }
+    &__description {
+      padding: 30px 0;
+
+      @include media-breakpoint-down(md) {
+        padding: 0;
+
+        &--text {
+          max-height: 100px;
+          height: 100%;
+          overflow: hidden;
+          position: relative;
+          margin-bottom: 15px;
+          transition: .2s;
+
+          &.opened {
+            max-height: 600px;
+            transition: .3s;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: rgba(255,255,255,0);
+            background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 38%, rgba(255,255,255,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(38%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,1)));
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 38%, rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 38%, rgba(255,255,255,1) 100%);
+            background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 38%, rgba(255,255,255,1) 100%);
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 38%, rgba(255,255,255,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+          }
+        }
+      }
+
+      &--title {
+        font-size: 20px;
+        margin: 0x;
+
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+      }
+      &--button {
+        font-size: 16px;
+        color: #9D331F;
+        text-decoration: none;
+
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+      }
+    }
+    &__request {
+      padding: 30px 0;
+
+
+    }
+  }
+
+}

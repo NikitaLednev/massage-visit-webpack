@@ -1,0 +1,99 @@
+.programs-front {
+
+  .column {
+    align-items: center;
+  }
+
+  .programs_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    padding-top: 50px;
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 30px;
+    }
+
+  }
+  .program-item {
+    padding: 30px 20px;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(sm) {
+      &:nth-child(n+4) {
+        display: none;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    &__image {
+      width: 100%;
+      height: 220px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 10px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__info {
+
+      &--price {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+    .info {
+      &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        margin-bottom: 10px;
+
+        .time__icon {
+          background: url('../../image/svg/time.svg') center no-repeat;
+        }
+        .stock__icon {
+          background: url('../../image/svg/gift.svg') center no-repeat;
+        }
+        .time__icon,
+        .stock__icon {
+          display: block;
+          height: 17px;
+          width: 17px;
+          margin-right: 15px;
+          background-size: contain;
+        }
+        p {
+          width: 100%;
+          margin: 0;
+        }
+      }
+    }
+  }
+  &__button {
+    border: 1px solid $c-primary;
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 30px;
+    }
+  }
+}

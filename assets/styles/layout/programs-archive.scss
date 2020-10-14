@@ -1,0 +1,133 @@
+.archive-programs {
+
+  .container {
+    padding: 30px 0;
+
+    @include media-breakpoint-down(md) {
+      padding: 20px;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-gap: 80px;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 60% 1fr;
+    }
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .programs {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 30px;
+      width: 100%;
+
+      @include media-breakpoint-down(md) {
+        padding-top: 30px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 30px;
+      }
+    }
+    &-container {
+
+      &--left {
+        overflow: hidden;
+      }
+
+      &--right {
+        padding-left: 50px;
+        overflow: hidden;
+        height: 100%;
+        max-height: 870px;
+        position: relative;
+        border-left: 1px solid #000;
+
+        @include media-breakpoint-down(xl) {
+          max-height: 1280px;
+        }
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+    }
+  }
+  .program-item {
+    padding: 30px 20px;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    justify-content: space-between;
+
+    &__title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      max-height: 160px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 10px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+
+      &--price {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+
+    .info {
+      &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        margin-bottom: 10px;
+
+        .time__icon {
+          background: url('../../image/svg/time.svg') center no-repeat;
+        }
+
+        .stock__icon {
+          background: url('../../image/svg/gift.svg') center no-repeat;
+        }
+
+        .time__icon,
+        .stock__icon {
+          display: block;
+          height: 17px;
+          width: 17px;
+          margin-right: 15px;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,25 @@
+.breadcrumbs {
+  .container {
+    padding: 25px 0;
+
+    @include media-breakpoint-down(md) {
+      padding: 25px 20px 0 20px;
+      overflow: scroll;
+    }
+  }
+  #breadcrumbs {
+    white-space: nowrap;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+    transition: .2s;
+
+    &:hover {
+      color: #9D331F;
+    }
+  }
+  .breadcrumb_last {
+    color: #9D331F;
+  }
+}

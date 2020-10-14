@@ -1,0 +1,23 @@
+.section-promo {
+  .container {
+    padding: 50px 0;
+
+    @include media-breakpoint-down(md) {
+      padding: 30px 20px;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 42px;
+      max-width: 700px;
+    }
+  }
+  &__button {
+    margin-top: 30px;
+  }
+
+}

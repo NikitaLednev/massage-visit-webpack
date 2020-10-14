@@ -1,0 +1,33 @@
+.notice-second-front {
+  background-color: #9D331F;
+  margin: 100px 0;
+
+  @include media-breakpoint-down(md) {
+    margin: 0;
+  }
+
+  .container {
+    padding: 35px 0;
+    background-image: url(../../image/svg/bucket.svg);
+    background-repeat: no-repeat;
+    background-size: 18%;
+    background-position: right;
+
+
+    @include media-breakpoint-down(md) {
+      padding: 25px 20px;
+      background: none;
+    }
+  }
+  .notice-second {
+    &-container {
+      font-family: "Roboto";
+      color: #fff;
+      width: 80%;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+  }
+}

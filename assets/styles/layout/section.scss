@@ -1,0 +1,14 @@
+.section {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    &__content {
+        width: 100%;
+    }
+
+    .section__title {
+        margin-bottom: 18px;
+    }
+}
