@@ -136,10 +136,29 @@
       }
     }
   }
+  .girls-front-button-next {
+    right: 5px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .girls-front-button-prev {
+    left: 5px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .girls-front-button-next,
+  .girls-front-button-prev {
+    &:after {
+      color: $c-primary;
+    }
+  }
   .swiper-masters--front {
     width: 100%;
     position: relative;
-    cursor: grab;
 
     @include media-breakpoint-up(sm) {
       margin-top: 50px;

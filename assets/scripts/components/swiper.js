@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 4,
         spaceBetween: 40,
         centeredSlides: true,
+        navigation: {
+            nextEl: '.girls-front-button-next',
+            prevEl: '.girls-front-button-prev',
+        },
 
         breakpoints: {
             576: {
@@ -47,7 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
         speed: 400,
         direction: 'vertical',
         slidesPerView: 'auto',
-        spaceBetween: 50,
+        spaceBetween: 30,
+        // cssMode: true,
         navigation: {
             nextEl: '.programs-sidebar-next',
             prevEl: '.programs-sidebar-prev',
@@ -82,6 +87,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+    const sidebarBlogSwiper = new Swiper('.blog-sidebar-swiper', {
+        speed: 400,
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        spaceBetween: 50,
+        navigation: {
+            nextEl: '.blog-sidebar-next',
+            prevEl: '.blog-sidebar-prev',
+        },
+    })
+
+
+
     if (window.matchMedia("(max-width: 576px)").matches && frontMastersSwiper.el) {
         frontMastersSwiper.destroy(true, true);
     }
@@ -90,6 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (window.matchMedia("(max-width: 768px)").matches && sidebarProgramsSwiper.el) {
         sidebarProgramsSwiper.destroy(true, true);
+    }
+    if (window.matchMedia("(max-width: 768px)").matches && sidebarBlogSwiper.el) {
+        sidebarBlogSwiper.destroy(true, true);
     }
 
 })

@@ -23,18 +23,23 @@
     &-container {
 
       &--right {
-        padding-left: 50px;
         overflow: hidden;
         height: 100%;
-        max-height: 660px;
         position: relative;
+      }
+      &--absolute {
+        padding-left: 50px;
         border-left: 1px solid #000;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: calc(100% - 50px);
+        display: flex;
+        flex-direction: column;
 
-        @include media-breakpoint-down(xl) {
-          max-height: 950px;
-        }
+
         @include media-breakpoint-down(md) {
-          max-height: 100%;
+          position: relative;
           padding: 0;
           border: none;
         }

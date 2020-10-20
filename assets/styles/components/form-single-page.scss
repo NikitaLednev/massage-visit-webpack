@@ -1,0 +1,87 @@
+.single-programs .form {
+  max-width: 240px
+}
+
+.single-programs .form__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0
+}
+
+.single-programs .wpcf7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+
+.single-programs .wpcf7-form {
+  padding-top: 10px
+}
+
+.single-programs .wpcf7 input,
+.single-programs .wpcf7 label,
+.single-programs .wpcf7 span {
+  display: block;
+  width: 100%
+}
+
+.single-programs .wpcf7 label {
+  color: #9d331f
+}
+
+.single-programs .wpcf7 #cf_name,
+.single-programs .wpcf7 #cf_phone {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #9d331f;
+  font-size: 1rem;
+  margin-top: 6px;
+  margin-bottom: 10px
+}
+
+.single-programs .wpcf7 #cf_name::-webkit-input-placeholder,
+.single-programs .wpcf7 #cf_phone::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0)
+}
+
+.single-programs .wpcf7 #cf_name::-moz-placeholder,
+.single-programs .wpcf7 #cf_phone::-moz-placeholder {
+  color: rgba(0, 0, 0, 0)
+}
+
+.single-programs .wpcf7 #cf_name:-ms-input-placeholder,
+.single-programs .wpcf7 #cf_phone:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0)
+}
+
+.single-programs .wpcf7 #cf_name::-ms-input-placeholder,
+.single-programs .wpcf7 #cf_phone::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0)
+}
+
+.single-programs .wpcf7 #cf_name::placeholder,
+.single-programs .wpcf7 #cf_phone::placeholder {
+  color: rgba(0, 0, 0, 0)
+}
+
+.single-programs .wpcf7 #cf_submit {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #9d331f;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  cursor: pointer
+}
+.single-programs span.ajax-loader {
+  display: none;
+}

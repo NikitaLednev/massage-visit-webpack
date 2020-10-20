@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () =>{
         readMoreText = document.querySelector('.programs__description--text')
 
     if(readMoreBtn){
-        readMoreBtn.addEventListener('click', (element) => {
-            element.preventDefault()
+        readMoreBtn.addEventListener('click', (e) => {
+            e.preventDefault()
             readMoreText.classList.add('opened')
             readMoreBtn.remove()
         })

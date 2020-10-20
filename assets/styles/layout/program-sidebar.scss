@@ -1,13 +1,13 @@
 .programs {
   &-sidebar {
+
+    &__main {
+      text-decoration: none;
+    }
     &-swiper {
-      height: calc(100% - 130px);
+      height: 100%;
       margin: 50px 0;
       overflow: hidden;
-
-      @include media-breakpoint-down(lg) {
-        height: calc(100% - 150px);
-      }
 
     }
     &-slide {
@@ -36,7 +36,7 @@
     }
     &-next {
       top: unset;
-      right: calc(50% - 40px);
+      right: calc(50% - 18px);
       bottom: 0;
       transform: rotate(90deg);
 
@@ -57,6 +57,8 @@
       font-weight: 400;
     }
     &__item {
+      color: #000;
+      text-decoration: none;
       height: max-content;
       width: 100%;
     }
@@ -77,5 +79,256 @@
         width: 100%;
       }
     }
+  }
+}
+
+.single-programs .container {
+  padding: 30px 0
+}
+
+.single-programs .grid {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  grid-gap: 80px
+}
+.single-programs .programs-info--row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px
+}
+
+.single-programs .programs__image {
+  max-height: 340px;
+  border-radius: 8px;
+  overflow: hidden
+}
+
+.single-programs .programs__image img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+
+.single-programs .programs__title {
+  font-size: 2.1875rem;
+  font-weight: 600;
+  margin: 0
+}
+
+.single-programs .programs-service {
+  padding-top: 10px;
+  padding-bottom: 30px
+}
+
+.single-programs .programs-service p {
+  margin: 0
+}
+
+.single-programs .programs-service__subtitle,
+.single-programs .programs-service__title {
+  color: #9d331f
+}
+
+.single-programs .programs__gift,
+.single-programs .programs__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline
+}
+
+.single-programs .programs__gift p,
+.single-programs .programs__value p {
+  margin: 10px 0 0;
+  width: 100%
+}
+
+.single-programs .programs__price {
+  font-size: 2.1875rem;
+  font-weight: 600;
+  margin: 0
+}
+
+.single-programs .programs__description {
+  padding: 30px 0
+}
+
+.single-programs .programs__description--title {
+  font-size: 1.25rem;
+  margin: 0x
+}
+
+.single-programs .programs__description--button {
+  font-size: 1rem;
+  color: #9d331f;
+  text-decoration: none
+}
+
+.single-programs .programs__request {
+  padding: 30px 0
+}
+
+
+
+.single-programs .programs-sidebar__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse
+}
+
+.single-programs .programs-sidebar__mobile {
+  display: none
+}
+
+.single-programs .program-item__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px
+}
+
+.single-programs .program-item__info .info__item {
+  display: none
+}
+
+@include media-breakpoint-down(md) {
+  .single-programs .programs-sidebar-next,
+  .single-programs .programs-sidebar-prev {
+    display: none
+  }
+  .single-programs .programs-sidebar__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .single-programs .programs-sidebar__mobile {
+    display: unset
+  }
+  .single-programs .programs-sidebar__item {
+    padding: 30px 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 240px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+  }
+  .single-programs .programs-sidebar-swiper {
+    height: 100%;
+    max-height: 100%;
+    margin: 30px 0
+  }
+  .single-programs .programs-sidebar-swiper .swiper-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .single-programs .programs-sidebar__title--main {
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center
+  }
+  .single-programs .programs-sidebar__image {
+    width: 100%;
+    max-height: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px
+  }
+  .single-programs .programs-sidebar__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+  }
+  .single-programs .programs-sidebar-slide {
+    margin-bottom: 30px
+  }
+  .single-programs .programs-sidebar-slide:last-child {
+    margin-bottom: 0
+  }
+  .single-programs .program-item__info--price,
+  .single-programs .program-item__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px
+  }
+  .single-programs .program-item__info .info__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-bottom: 10px
+  }
+  .single-programs .program-item__info .info__item .time__icon {
+    background: url(/wp-content/themes/massagevisit/assets/image/svg/time.svg) 50% no-repeat
+  }
+  .single-programs .program-item__info .info__item .stock__icon {
+    background: url(/wp-content/themes/massagevisit/assets/image/svg/gift.svg) 50% no-repeat
+  }
+  .single-programs .program-item__info .info__item .stock__icon,
+  .single-programs .program-item__info .info__item .time__icon {
+    display: block;
+    height: 17px;
+    width: 17px;
+    margin-right: 15px;
+    background-size: contain
+  }
+  .single-programs .program-item__info .info__item p {
+    width: 100%;
+    margin: 0
+  }
+}
+@include media-breakpoint-down(lg) {
+
+  single-programs .grid {
+    grid-template-columns: 60% 1fr
+  }
+  .single-programs .programs-info--row {
+    grid-template-columns: 1fr;
+    grid-gap: 0
+  }
+
+}
+.program-item {
+  &__title {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
   }
 }

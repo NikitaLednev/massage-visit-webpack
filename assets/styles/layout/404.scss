@@ -1,0 +1,35 @@
+.unfound {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //padding: 100px 0;
+
+
+  }
+  &__back {
+    display: block;
+    background-image: url(../../image/untitled.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 320px;
+    width: 60%;
+
+    @include media-breakpoint-down(lg) {
+      min-height: 300px;
+    }
+    @include media-breakpoint-down(md) {
+      min-height: 200px;
+      width: 100%;
+    }
+  }
+  &__text {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+  }
+  &__button {
+    margin-top: 30px;
+  }
+}

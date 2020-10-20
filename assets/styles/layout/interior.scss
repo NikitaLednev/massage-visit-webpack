@@ -1,6 +1,6 @@
 .interior {
   .container {
-    padding: 30px 0;
+    padding: 30px 0 100px 0;
 
     @include media-breakpoint-down(md) {
       padding: 20px;
@@ -24,11 +24,18 @@
     &__item {
       overflow: hidden;
 
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+      }
+
       img {
         display: block;
         width: 100%;
         height: auto;
         object-fit: cover;
+        transition: .2s;
       }
     }
   }

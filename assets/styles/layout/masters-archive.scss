@@ -110,6 +110,15 @@
           display: none;
         }
       }
+      &--absolute {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: calc(100% - 50px);
+        display: flex;
+        flex-direction: column;
+      }
     }
     &__title {
       color: #fff;

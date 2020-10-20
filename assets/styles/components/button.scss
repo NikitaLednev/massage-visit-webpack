@@ -12,6 +12,7 @@
 }
 
 .button--primary {
+    display: flex;
     background-color: #fff;
     border-radius: 8px;
     color: $c-primary;
@@ -20,17 +21,18 @@
 
 }
 .button--secondary {
+    display: flex;
     background-color: $c-primary;
     color: #fff;
     border-radius: 8px;
     padding: 10px 30px;
     width: max-content;
 }
-.section-masters__button {
+.section-masters__button,
+.button--third {
     background-color: transparent;
     color: $c-primary;
     border-radius: 8px;
-    color: $c-primary;
     padding: 10px 30px;
     width: max-content;
     border: 1px solid $c-primary;
