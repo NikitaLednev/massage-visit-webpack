@@ -68,6 +68,7 @@
   "dependencies": {
     "imask": "^6.0.5",
     "jquery": "^3.5.1",
+    "lazyload": "^2.0.0-rc.2",
     "magnific-popup": "^1.1.0",
     "micromodal": "^0.4.6",
     "swiper": "^5.3.6"

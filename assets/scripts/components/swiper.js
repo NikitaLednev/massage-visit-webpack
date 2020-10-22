@@ -2,6 +2,10 @@ import Swiper from 'swiper';
 
 document.addEventListener("DOMContentLoaded", () => {
     const frontMastersSwiper = new Swiper('.swiper-masters--front', {
+        preloadImages: false,
+        lazy: {
+            loadPrevNext: true,
+        },
         loop: true,
         speed: 400,
         direction: 'horizontal',
