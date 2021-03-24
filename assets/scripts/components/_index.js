@@ -4,3 +4,4 @@ import './inputmask';
 import './imagePopup';
 import './readMore';
 import './form';
+import './scrollTop';

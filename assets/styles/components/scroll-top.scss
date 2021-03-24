@@ -1,0 +1,61 @@
+.scroll-top {
+  position: fixed;
+  display: flex;
+  left: -20px;
+  bottom: 30px;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 100;
+  transform: rotate(-90deg);
+  transition: .5s linear;
+
+  @include media-breakpoint-up(lg) {
+    left: 0;
+    bottom: 50px;
+  }
+
+  &.show {
+    opacity: 1;
+    pointer-events: unset;
+    visibility: visible;
+
+    @include media-breakpoint-up(lg) {
+      opacity: .5;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+  }
+  span {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin-left: 5px;
+      background-image: url(../../image/svg/arrow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      filter: brightness(0);
+
+      @include media-breakpoint-up(lg) {
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
